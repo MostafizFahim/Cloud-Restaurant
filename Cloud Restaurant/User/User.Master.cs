@@ -11,15 +11,15 @@ namespace Cloud_Restaurant.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Request.Url.AbsoluteUri.ToString().Contains("Defautl.aspx"))
+            if(!Request.Url.AbsoluteUri.ToString().Contains("Default.aspx"))
             {
                 form1.Attributes.Add("class","sub_page");
             }
             else
             {
                 form1.Attributes.Remove("class");
-                
-                
+                Control sliderUserControl = (Control)Page.LoadControl("SliderUserControl.ascx");
+                Panel1.Controls.Add(sliderUserControl);
             }
 
         }

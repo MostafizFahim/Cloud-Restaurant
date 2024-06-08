@@ -1,5 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SliderUserControl.ascx.cs" Inherits="Cloud_Restaurant.User.WebUserControl1" %>
-
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SliderUserControl.ascx.cs" Inherits="Cloud_Restaurant.User.SliderUserControl" %>
 <section class="slider_section ">
     <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">

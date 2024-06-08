@@ -131,19 +131,19 @@
     <Compile Include="User\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\User.Master.cs">
-      <DependentUpon>User.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User\User.Master.designer.cs">
-      <DependentUpon>User.Master</DependentUpon>
-    </Compile>
     <Compile Include="User\SliderUserControl.ascx.cs">
       <DependentUpon>SliderUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\SliderUserControl.ascx.designer.cs">
       <DependentUpon>SliderUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
