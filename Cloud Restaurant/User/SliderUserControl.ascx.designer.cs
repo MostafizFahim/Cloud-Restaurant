@@ -11,7 +11,7 @@ namespace Cloud_Restaurant.User
 {
 
 
-    public partial class WebUserControl1
+    public partial class SliderUserControl
     {
     }
 }
