@@ -11,7 +11,7 @@ namespace Cloud_Restaurant
     {
         public static string GetConnectionString()
         {
-            return ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
+            return ConfigurationManager.ConnectionStrings["CloudDBConnectionString"].ConnectionString;
         }
     }
 
