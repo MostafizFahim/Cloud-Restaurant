@@ -34,9 +34,11 @@
 
 
     <!-- DataTables -->
-    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/daataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/datatables/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/datatables/css/icon-font.min.css">
+     <link rel="stylesheet" type="text/css" href="../assets/datatables/css/responsive.dataTables.min.css">
+     <link rel="stylesheet" type="text/css" href="../assets/datatables/css/jquery.dataTables.min.css">
     <!-- DataTables -->
 
 
@@ -193,7 +195,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Product Crud</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="chart.html">
+                                        <a href="Product.aspx">
                                             <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.form-components.main">Product</span>
                                             <span class="pcoded-mcaret"></span>
@@ -217,7 +219,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">User's List</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="#">
+                                        <a href="Users.aspx">
                                             <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Users</span>
                                             <span class="pcoded-mcaret"></span>
