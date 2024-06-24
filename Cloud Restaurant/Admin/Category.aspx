@@ -132,7 +132,7 @@
 
                                                                     </asp:LinkButton>
 
-                                                                    <asp:LinkButton ID="lblDelete" Text="Delete" runat="server" CssClass="badge bg-danger"
+                                                                    <asp:LinkButton ID="lnkDelete" Text="Delete" runat="server" CssClass="badge bg-danger"
                                                                         CommandArgument='<%# Eval("CategoryId") %>' CommandName="delete"
                                                                         OnClientClick="return confirm('Do you want to delete this Category?');">
                                                                          <i class="ti-trash"></i>

@@ -45,7 +45,7 @@ namespace Cloud_Restaurant.User
             cmd = new SqlCommand("User_Crud", con);
             cmd.Parameters.AddWithValue("@Action", userId == 0 ? "INSERT" : "UPDATE");
             cmd.Parameters.AddWithValue("@UserId", userId);
-            cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
+            cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());  
             cmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
             cmd.Parameters.AddWithValue("@Mobile", txtMobile.Text.Trim());
             cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
@@ -158,8 +158,6 @@ namespace Cloud_Restaurant.User
             txtAddress.Text = string.Empty;
             txtPostCode.Text = string.Empty;
             txtPassword.Text = string.Empty;
-            
-
         }
     }
 }
