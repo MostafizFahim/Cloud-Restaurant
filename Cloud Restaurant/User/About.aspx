@@ -10,25 +10,25 @@
       <div class="row">
         <div class="col-md-6 ">
           <div class="img-box">
-            <img src="../TemplateFiles/images/about-img.png" alt="">
+            <img src="../TemplateFiles/images/user-logo.png" alt="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                We Are Cloud Restaurant
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              Welcome to Cloud Restaurant!At Cloud Restaurant, we bring delicious meals straight to your 
+                doorstep with just a few clicks.Explore our diverse menu featuring a variety of cuisines,
+                place your order effortlessly,and enjoy fast and reliable delivery. Whether you're craving 
+                a quick bite or a gourmet inner, we've got something for everyone. Our commitment to quality 
+                and customer satisfaction ensures that every meal you receive is fresh, tasty, and prepared 
+                with care.Join us and experience the convenience of online food ordering at its best!
             </p>
-            <a href="">
-              Read More
-            </a>
+           
           </div>
         </div>
       </div>

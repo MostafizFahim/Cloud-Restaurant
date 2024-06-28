@@ -103,6 +103,7 @@
     <Content Include="assets\icon\icofont\fonts\icofont.svg" />
     <Content Include="assets\icon\themify-icons\fonts\themify.svg" />
     <Content Include="assets\icon\themify-icons\themify-icons.css" />
+    <Content Include="assets\images\admin.png" />
     <Content Include="assets\images\auth\logo-dark.png" />
     <Content Include="assets\images\auth\Logo-small-bottom.png" />
     <Content Include="assets\images\auth\logo.png" />
@@ -117,6 +118,8 @@
     <Content Include="assets\images\flags\FRANCE.jpg" />
     <Content Include="assets\images\flags\PORTO.jpg" />
     <Content Include="assets\images\flags\SPAIN.jpg" />
+    <Content Include="assets\images\logo-admin.png" />
+    <Content Include="assets\images\logo-admin1.png" />
     <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\mega-menu\01.jpg" />
     <Content Include="assets\images\mega-menu\02.jpg" />
@@ -190,6 +193,9 @@
     <Content Include="TemplateFiles\images\about-img.png" />
     <Content Include="TemplateFiles\images\client1.jpg" />
     <Content Include="TemplateFiles\images\client2.jpg" />
+    <Content Include="TemplateFiles\images\client_1.1.jpg" />
+    <Content Include="TemplateFiles\images\client_1.2.jpg" />
+    <Content Include="TemplateFiles\images\client_1.3.jpg" />
     <Content Include="TemplateFiles\images\f1.png" />
     <Content Include="TemplateFiles\images\f2.png" />
     <Content Include="TemplateFiles\images\f3.png" />
@@ -201,8 +207,11 @@
     <Content Include="TemplateFiles\images\f9.png" />
     <Content Include="TemplateFiles\images\favicon.png" />
     <Content Include="TemplateFiles\images\hero-bg.jpg" />
+    <Content Include="TemplateFiles\images\hero-bg5.png" />
+    <Content Include="TemplateFiles\images\hero-bg6.png" />
     <Content Include="TemplateFiles\images\o1.jpg" />
     <Content Include="TemplateFiles\images\o2.jpg" />
+    <Content Include="TemplateFiles\images\user-logo.png" />
     <Content Include="TemplateFiles\js\bootstrap.js" />
     <Content Include="TemplateFiles\js\custom.js" />
     <Content Include="TemplateFiles\js\jquery-3.4.1.min.js" />

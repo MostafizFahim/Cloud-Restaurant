@@ -166,23 +166,22 @@
       <div class="row">
         <div class="col-md-6 ">
           <div class="img-box">
-            <img src="../TemplateFiles/images/about-img.png" alt="">
+            <img src="../TemplateFiles/images/user-logo.png" alt="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                We Are Cloud Restaurant
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+               Welcome to Cloud Restaurant!At Cloud Restaurant, we bring delicious meals straight to your 
+   doorstep with just a few clicks.Explore our diverse menu featuring a variety of cuisines,
+   place your order effortlessly,and enjoy fast and reliable delivery.....
             </p>
-            <a href="">
+            <a href="About.aspx">
               Read More
             </a>
           </div>
@@ -207,17 +206,17 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  I recently ordered from Cloud Restaurant, and I must say, the experience was fantastic! The online ordering process was incredibly easy and intuitive. The menu offered a great variety of options, catering to different tastes and dietary preferences.
                 </p>
                 <h6>
-                  Moana Michell
+                  Naeema Jannat
                 </h6>
                 <p>
-                  magna aliqua
+                  Hatirjil,Dhaka
                 </p>
               </div>
               <div class="img-box">
-                <img src="../TemplateFiles/images/client1.jpg" alt="" class="box-img">
+                <img src="../TemplateFiles/images/client_1.3.jpg" alt="" class="box-img">
               </div>
             </div>
           </div>
@@ -225,17 +224,17 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  I had an amazing experience with Cloud Restaurant! From the moment I placed my order to the time it arrived at my door, everything was seamless. The website is user-friendly, making it easy to browse through their extensive menu and customize my order just the way I like it.
                 </p>
                 <h6>
-                  Mike Hamell
+                  Asadut Jaman
                 </h6>
                 <p>
-                  magna aliqua
+                  Khilgaon,Dhaka
                 </p>
               </div>
               <div class="img-box">
-                <img src="../TemplateFiles/images/client2.jpg" alt="" class="box-img">
+                <img src="../TemplateFiles/images/client_1.2.jpg" alt="" class="box-img">
               </div>
             </div>
           </div>

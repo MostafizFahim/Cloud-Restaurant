@@ -19,7 +19,7 @@
     <meta name="keywords" content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
     <meta name="author" content="CodedThemes">
     <!-- Favicon icon -->
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/images/admin.png" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <!-- Required Fremwork -->
@@ -121,8 +121,8 @@
                             <a class="mobile-search morphsearch-search" href="#">
                                 <i class="ti-search"></i>
                             </a>
-                            <a href="index.html">
-                                <img class="img-fluid" src="" alt="Theme-Logo" />
+                            <a href="Dashboard.aspx">
+                                <img class="img-fluid" src="../assets/images/logo-admin1.png" alt="Theme-Logo" />
                             </a>
                             <a class="mobile-options">
                                 <i class="ti-more"></i>
@@ -255,7 +255,7 @@
                         <div class="pcoded-content">
                             <!-- Danger-color Breadcrumb card start -->
                             <div class="card borderless-card">
-                                <div class="card-block danger-breadcrumb">
+                                <div class="card-block primary-breadcrumb">
 
                                     <div class="page-header-breadcrumb">
                                         <ul class="breadcrumb-title">

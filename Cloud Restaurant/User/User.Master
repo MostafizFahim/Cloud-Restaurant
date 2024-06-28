@@ -19,7 +19,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" href="../TemplateFiles/images/favicon.png" type="">
+    <link rel="shortcut icon" href="../TemplateFiles/images/user-logo.png" type="">
 
     <title>Cloud Restaurent </title>
 
@@ -67,7 +67,7 @@
 
         <div class="hero_area">
             <div class="bg-box">
-                <img src="../TemplateFiles/images/hero-bg.jpg" alt="">
+                <img src="../TemplateFiles/images/hero-bg6.png" alt="">
             </div>
             <!-- header section strats -->
             <header class="header_section">
@@ -207,6 +207,7 @@
                     </div>
                     <div class="col-md-4 footer-col">
                         <div class="footer_detail">
+                             
                             <a href="" class="footer-logo">Cloud Restaurant
                             </a>
                             <p>
