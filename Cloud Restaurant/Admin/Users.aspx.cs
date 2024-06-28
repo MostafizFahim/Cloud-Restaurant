@@ -21,9 +21,9 @@ namespace Cloud_Restaurant.Admin
         {
             if (!IsPostBack)
             {
-                Session["breadCrum"] = "Users";
-                getUsers();
-            }
+               Session["breadCrum"] = "Users";
+               getUsers();
+                           }
             //lblMsg.Visible = false;
         }
 
@@ -31,7 +31,7 @@ namespace Cloud_Restaurant.Admin
         {
             con = new SqlConnection(Connection.GetConnectionString());
             cmd = new SqlCommand("User_Crud", con);
-            cmd.Parameters.AddWithValue("@Action", "SELECT4ADMIN");
+            cmd.Parameters.AddWithValue("@Action", "SELECT");
             cmd.CommandType = CommandType.StoredProcedure;
             sda = new SqlDataAdapter(cmd);
             dt = new DataTable();

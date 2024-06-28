@@ -123,7 +123,7 @@ namespace Cloud_Restaurant.User
         {
             con = new SqlConnection(Connection.GetConnectionString());
             cmd = new SqlCommand("User_Crud", con);
-            cmd.Parameters.AddWithValue("@Action", "SELECT4PROFILE");
+            cmd.Parameters.AddWithValue("@Action", "SELECTPROFILE");
             cmd.Parameters.AddWithValue("@UserId", Request.QueryString["id"]);
             cmd.CommandType = CommandType.StoredProcedure;
             sda = new SqlDataAdapter(cmd);
