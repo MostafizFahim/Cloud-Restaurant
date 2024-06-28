@@ -112,6 +112,7 @@
     <Content Include="assets\images\avatar-4.jpg" />
     <Content Include="assets\images\bg.jpg" />
     <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\favicon.png" />
     <Content Include="assets\images\flags\ENGLISH.jpg" />
     <Content Include="assets\images\flags\FRANCE.jpg" />
     <Content Include="assets\images\flags\PORTO.jpg" />
