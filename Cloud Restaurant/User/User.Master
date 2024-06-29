@@ -160,8 +160,10 @@
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </button>
                                 </div>
-                                <a href="" class="order_online">Order Online
-                                </a>
+                                <%--<a href="" class="order_online">Order Online
+                                </a>--%>
+                                <asp:LinkButton ID="lblLoginOrLogout" runat="server" CssClass="order_online" CausesValidation="false" 
+                                    OnClick="lblLoginOrLogout_Click"></asp:LinkButton>
                             </div>
                         </div>
                     </nav>
