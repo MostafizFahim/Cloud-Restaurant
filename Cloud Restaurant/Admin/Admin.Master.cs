@@ -13,5 +13,11 @@ namespace Cloud_Restaurant.Admin
         {
 
         }
+
+        protected void lblLogot_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("../User/Login.aspx");
+        }
     }
 }

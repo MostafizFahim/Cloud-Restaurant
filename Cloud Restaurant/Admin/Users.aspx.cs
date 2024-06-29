@@ -22,7 +22,15 @@ namespace Cloud_Restaurant.Admin
             if (!IsPostBack)
             {
                Session["breadCrum"] = "Users";
-               getUsers();
+                if (Session["admin"] == null)
+                {
+                    Response.Redirect("../User/Login.aspx");
+                }
+                else
+                {
+                    getUsers();
+
+                }
                            }
             //lblMsg.Visible = false;
         }

@@ -21,7 +21,29 @@ namespace Cloud_Restaurant.User
                 Control sliderUserControl = (Control)Page.LoadControl("SliderUserControl.ascx");
                 Panel1.Controls.Add(sliderUserControl);
             }
+            if (Session["userId"] != null)
+            {
+                lblLoginOrLogout.Text = "Logout";
+            }
+            else
+            {
+                lblLoginOrLogout.Text = "Login";
+            }
 
+        }
+
+        protected void lblLoginOrLogout_Click(object sender, EventArgs e)
+        {
+            if (Session["userId"] == null)
+            {
+                Response.Redirect("Login.aspx");
+
+            }
+            else
+            {
+                Session.Abandon();
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }
