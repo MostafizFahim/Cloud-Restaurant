@@ -102,6 +102,8 @@
     <Content Include="assets\icon\themify-icons\fonts\themify.svg" />
     <Content Include="assets\icon\themify-icons\themify-icons.css" />
     <Content Include="assets\images\admin.png" />
+    <Content Include="assets\images\admin1.jpg" />
+    <Content Include="assets\images\admin2.jpg" />
     <Content Include="assets\images\auth\logo-dark.png" />
     <Content Include="assets\images\auth\Logo-small-bottom.png" />
     <Content Include="assets\images\auth\logo.png" />

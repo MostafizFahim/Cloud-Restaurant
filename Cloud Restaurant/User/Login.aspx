@@ -1,18 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Cloud_Restaurant.User.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <script>
-            window.onload = function () {
-                var seconds = 25;
-                setTimeout(function () {
-                    document.getElementById("<%=lblMsg.ClientID %>").style.display = "none";
+    <script>
+        window.onload = function () {
+            var seconds = 25;
+            setTimeout(function () {
+                document.getElementById("<%=lblMsg.ClientID %>").style.display = "none";
                 }, seconds + 1000);
-            };
+        };
 
-        </script>
+    </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <section class="book_section layout_padding">
         <div class="container">
             <div class="heading_container">
@@ -24,7 +23,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form_container">
-                        <img id="usserLogin" src="../Images/login.jpg" alt="" class="img-thumbnail" />
+                        <img id="userLogin" src="../Images/login.jpg" alt="" class="img-thumbnail"height="400" width="500" />
                     </div>
                 </div>
                 <div class="col-md-6">

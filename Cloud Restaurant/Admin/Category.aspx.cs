@@ -27,9 +27,10 @@ namespace Cloud_Restaurant.Admin
                     Response.Redirect("../User/Login.aspx");
                 }
                 else
-                { 
+                {
                     getCategories();
                 }
+                
             }
             lblMsg.Visible = false;
 

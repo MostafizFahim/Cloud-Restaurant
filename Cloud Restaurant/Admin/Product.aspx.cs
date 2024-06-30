@@ -28,8 +28,8 @@ namespace Cloud_Restaurant.Admin
                 else
                 {
                     getProducts();
-
                 }
+                
             }
             lblMsg.Visible = false;
 

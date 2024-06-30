@@ -29,10 +29,10 @@ namespace Cloud_Restaurant.Admin
                 else
                 {
                     getUsers();
-
                 }
-                           }
-            //lblMsg.Visible = false;
+                
+            }
+            
         }
 
         private void getUsers()
