@@ -32,6 +32,7 @@ namespace Cloud_Restaurant.User
                     getUserDetails();
                 }
             }
+            //lblCreatedDate.ToString();
 
         }
         void getUserDetails()
