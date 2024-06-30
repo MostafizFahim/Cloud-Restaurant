@@ -67,7 +67,7 @@
 
         <div class="hero_area">
             <div class="bg-box">
-                <img src="../TemplateFiles/images/hero-bg5.png" alt="">
+                <img src="../TemplateFiles/images/hero-bg6.png" alt="">
             </div>
             <!-- header section strats -->
             <header class="header_section">
@@ -160,8 +160,11 @@
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </button>
                                 </div>
-                                <a href="" class="order_online">Order Online
-                                </a>
+                                <%--<a href="" class="order_online">
+                                    Order Online
+                                </a>--%>
+                                <asp:LinkButton ID="lblLoginOrLogout" runat="server" CssClass="order_online" CausesValidation="false" 
+                                    OnClick="lblLoginOrLogout_Click"></asp:LinkButton>
                             </div>
                         </div>
                     </nav>
@@ -194,12 +197,12 @@
                                 </a>
                                 <a href="">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>Call +01 1234567890
+                                    <span>Call +88 01785227997
                                     </span>
                                 </a>
                                 <a href="">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <span>demo@gmail.com
+                                    <span>cloudrestaurant@gmail.com
                                     </span>
                                 </a>
                             </div>
@@ -208,13 +211,13 @@
                     <div class="col-md-4 footer-col">
                         <div class="footer_detail">
                              
-                            <a href="" class="footer-logo">Cloud Restaurant
+                            <a href="Default.aspx" class="footer-logo">Cloud Restaurant
                             </a>
                             <p>
-                                Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+                                "Where the flavors soar above the clouds – Welcome to Cloud Restaurant, where every meal is a culinary journey to new heights."
                             </p>
                             <div class="footer_social">
-                                <a href="">
+                                <a href="https://www.facebook.com/">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                 </a>
                                 <a href="">
@@ -246,10 +249,12 @@
                 <div class="footer-info">
                     <p>
                         &copy; <span id="displayYear"></span>All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br>
+          <a href="Default.aspx">Cloud Restaurant</a><br>
                         <br>
-                        &copy; <span id="displayYear"></span>Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+                        &copy; <span id="displayYear"></span>Developed By
+          <a href="https://www.facebook.com/mostafizurrrahman.mrf?mibextid=ZbWKwL" target="_blank">Mostafiz Fahim ,</a>
+                        <a href="https://www.facebook.com/joyee.bro?mibextid=ZbWKwL" target="_blank">Naeema Jannat ,</a>
+                        <a href="https://www.facebook.com/revelasad56?mibextid=ZbWKwL" target="_blank">Asadut Jaman.</a>
                     </p>
                 </div>
             </div>
