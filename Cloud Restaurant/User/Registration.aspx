@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script>
     window.onload = function () {
-        var seconds = 25;
+        var seconds = 100;
         setTimeout(function () {
             document.getElementById("<%=lblMsg.ClientID %>").style.display = "none";
      }, seconds + 1000);

@@ -45,5 +45,21 @@ namespace Cloud_Restaurant.User
                 Response.Redirect("Login.aspx");
             }
         }
+
+        protected void lblRegisterOrProfile_Click(object sender, EventArgs e)
+        {
+            if (Session["userId"] != null)
+            {
+                lblRegisterOrProfile.ToolTip = "User Profile";
+                Response.Redirect("Profile.aspx");
+
+            }
+            else
+            {
+                lblRegisterOrProfile.ToolTip = "User Registration";
+                Response.Redirect("Registration.aspx");
+            }
+
+        }
     }
 }
