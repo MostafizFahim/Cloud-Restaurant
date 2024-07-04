@@ -45,7 +45,7 @@
                     <div class="form_container">
                         <div>
                             
-                            <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="Name is required" ControlToValidate="txtName"
+                            <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="Name is required" ControlToValidate="txtName" Font-Size="Small"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revName" runat="server" ErrorMessage="Name must be in characters only"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[a-zA-Z\s]+$"
@@ -54,27 +54,35 @@
                                 ToolTip="Full Name"></asp:TextBox>
                         </div>
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Username is required"
+                            <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Username is required" Font-Size="Small"
                                 ControlToValidate="txtUsername" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Enter Username"
                                 ToolTip="Username"></asp:TextBox>
                         </div>
 
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Email is required"
+                            <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Email is required" Font-Size="Small"
                                 ControlToValidate="txtEmail" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter Email Address"
                                 ToolTip="Email" TextMode="Email"></asp:TextBox>
                         </div>
 
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvMobile" runat="server" ErrorMessage="Mobile Number is required" ControlToValidate="txtMobile"
+                            <asp:RequiredFieldValidator ID="rfvMobile" runat="server" ErrorMessage="Mobile Number is required" ControlToValidate="txtMobile" Font-Size="Small"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revMobile" runat="server" ErrorMessage="Mobile No. must have 11 digits and integer only"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9]{11}$"
                                 ControlToValidate="txtMobile"></asp:RegularExpressionValidator>
                             <asp:TextBox ID="txtMobile" runat="server" CssClass="form-control" placeholder="Enter Mobile Number"
                                 ToolTip="Mobile Number" TextMode="Number"></asp:TextBox>
+                        </div>
+                        <div class="btn-box">
+                            <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="btn btn-success rounded-pill pl-4 pr-4 text-white"
+                                OnClick="btnRegister_Click" />
+
+                            <asp:Label ID="lblAlreadyUser" runat="server" CssClass="pl-3 text-black-100"
+                                Text="Already registered? <a href='Login.aspx' class='badge badge-info'>Login here..</a>">
+                            </asp:Label>
                         </div>
                     </div>
 
@@ -83,7 +91,7 @@
                     <div class="form_container">
 
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ErrorMessage="Address is required" 
+                            <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ErrorMessage="Address is required" Font-Size="Small"
                                 ControlToValidate="txtAddress"  ForeColor="Red" Display="Dynamic" SetFocusOnError="true">
                             </asp:RequiredFieldValidator>
                             <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Enter Address"
@@ -91,7 +99,7 @@
                         </div>
 
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvPostCode" runat="server" ErrorMessage="Post/Zip Code is required"
+                            <asp:RequiredFieldValidator ID="rfvPostCode" runat="server" ErrorMessage="Post/Zip Code is required" Font-Size="Small"
                                 ControlToValidate="txtPostCode" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revPostCode" runat="server" ErrorMessage="Post/Zip Code must be of 4 digits"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9]{4}$"
@@ -106,46 +114,28 @@
                         </div>
 
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="Password is required" ControlToValidate="txtPassword"
+                            <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="Password is required" ControlToValidate="txtPassword" Font-Size="Small"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Enter Password"
                                ToolTip="Password" TextMode="Password"></asp:TextBox>
                         </div>
-
-
-
+                        <div>
+                           
+                            <asp:CompareValidator ID="cmpPassword" runat="server" ErrorMessage="Password & Confirm Password should be same." 
+                                ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" ForeColor="Red" Display="Dynamic" 
+                                SetFocusOnError="true" Font-Size="Small"></asp:CompareValidator>
+                             <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Confirm Password" required></asp:TextBox>
+                        </div>
                     </div>
 
                 </div>
 
                 <div class="row pl-4">
-                    <div class="btn-box">
-                        <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="btn btn-success rounded-pill pl-4 pr-4 text-white"
-                            onClick="btnRegister_Click"/>
-
-                        <asp:Label ID="lblAlreadyUser" runat="server" CssClass="pl-3 text-black-100"
-                            Text="Already registered? <a href='Login.aspx' class='badge badge-info'>Login here..</a>">
-                        </asp:Label>
+                    <div style="align-items: center">
+                        <asp:Image ID="imgUser" runat="server" CssClass="img-thumbnail" />
                     </div>
-
                 </div>
-
-                <div class="row p-5">
-                    <div style="align-items:center">
-                        <asp:Image ID="imgUser" runat="server" CssClass="img-thumbnail"/>
-                    </div>
-
-                </div>
-
             </div>
-
         </div>
-
-
-
     </section>
-
-
-
-
 </asp:Content>
