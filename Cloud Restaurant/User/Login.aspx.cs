@@ -45,6 +45,7 @@ namespace Cloud_Restaurant.User
                     {
                         showErrorMsg("Admin");
                     }
+                    //Select login type 
                 }
                 
                 else
