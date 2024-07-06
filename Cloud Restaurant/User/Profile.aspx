@@ -37,7 +37,7 @@
                                         <h6 class="d-block">
                                             <a href="javascript:void(0)">
                                                 <asp:Label ID="lblUsername" runat="server" ToolTip="Unique Username"> 
-                                                    <%Response.Write(Session["username"]); %>
+                                                    @<%Response.Write(Session["username"]); %>
                                                 </asp:Label>
                                             </a>
                                         </h6>
