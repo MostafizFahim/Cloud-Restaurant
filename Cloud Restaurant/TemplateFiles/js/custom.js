@@ -100,3 +100,25 @@ $(".client_owl-carousel").owlCarousel({
         }
     }
 });
+
+(function ($) {
+    var proQty = $('.pro-qty');
+    proQty.prepend('<span class="dec qtybtn">-</span>');
+    proQty.append('<span class="inc qtybtn">+</span>');
+    proQty.on('click', '.qtybtn', function () {
+        var $button = $(this);
+        var oldValue = $button.parent().find('input').val();
+        var newVal;
+
+        if ($button.hasClass('inc')) {
+            newVal = parseFloat(oldValue) + 1;
+        } else {
+            if (oldValue > 1) {
+                newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+        $button.parent().find('input').val(newVal);
+    });
+})(jQuery);

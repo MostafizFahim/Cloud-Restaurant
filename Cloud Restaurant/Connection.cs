@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Web;
@@ -17,6 +20,8 @@ namespace Cloud_Restaurant
 
     public class Utils
     {
+        SqlConnection con;
+        SqlCommand cmd;
         public static bool IsValidExtension(string fileName) 
         {
             bool isValid = false;
@@ -46,6 +51,35 @@ namespace Cloud_Restaurant
             }
             
             return url1;
+        }
+
+        public bool updateCartQuantity(int quantity, int productId, int userId)
+        {
+            bool isUpdated = false;
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Cart_Crud", con);
+            cmd.Parameters.AddWithValue("@Action", "UPDATE");
+            cmd.Parameters.AddWithValue("@ProductId", productId);
+            cmd.Parameters.AddWithValue("@Quantity", quantity);
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+                isUpdated = true;
+            }
+            catch (Exception ex)
+            {
+                isUpdated = false;
+                System.Web.HttpContext.Current.Response.Write("<script>alert('Error - " + ex.Message + "');<script>");
+
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isUpdated;
         }
 
 
