@@ -50,6 +50,68 @@ namespace Cloud_Restaurant.User
             rProducts.DataSource = dt;
             rProducts.DataBind();
         }
+
+        protected void rProducts_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (Session["userId"] != null)
+            {
+                bool isCarItemUpdated = false;
+                int i = isItemExistInCart(Convert.ToInt32(e.CommandArgument) );
+                if(i == 0)
+                {
+                    con = new SqlConnection(Connection.GetConnectionString());
+                    cmd = new SqlCommand("Cart_Crud", con);
+                    cmd.Parameters.AddWithValue("@Action", "INSERT");
+                    cmd.Parameters.AddWithValue("@ProductId", e.CommandArgument);
+                    cmd.Parameters.AddWithValue("@Quantity", 1);
+                    cmd.Parameters.AddWithValue("@UserId", Session["userId"]);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch(Exception ex)
+                    {
+                        Response.Write("<script>alert('Error - " + ex.Message+ "');<script>");
+
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
+        }
+
+        int isItemExistInCart(int productId)
+        {
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Cart_Crud", con);
+            cmd.Parameters.AddWithValue("@Action", "GETBYID");
+            cmd.Parameters.AddWithValue("@ProductId", productId);
+            cmd.Parameters.AddWithValue("@UserId", Session["userId"]);
+            cmd.CommandType = CommandType.StoredProcedure;
+            sda = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            sda.Fill(dt);
+            int quantity = 0;
+            if(dt.Rows.Count > 0)
+            {
+                quantity = Convert.ToInt32(dt.Rows[0]["Quantity"]);
+            }
+            return quantity;
+        }
+
         //public string LowerCase(object obj)
         //{
         //    return obj.ToString().ToLower();
