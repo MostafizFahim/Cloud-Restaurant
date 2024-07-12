@@ -92,7 +92,7 @@ namespace Cloud_Restaurant.User
                 lblMsg.Visible = true;
                 lblMsg.Text = "Item added successfully in your cart!";
                 lblMsg.CssClass = "alert alert-success";
-                Response.AddHeader("REFRESH", "1;URL=cart.aspx");
+                Response.AddHeader("REFRESH", "1;URL=Cart.aspx");
             }
             else
             {
