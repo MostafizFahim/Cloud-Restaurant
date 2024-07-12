@@ -16,10 +16,10 @@
             </div>
         </div>
 
-        <div class="heading_container">
+        <div class="container">
             <asp:Repeater ID="rCartItem" runat="server" OnItemCommand="rCartItem_ItemCommand" OnItemDataBound="rCartItem_ItemDataBound">
                 <HeaderTemplate>
-                    <table class="table ">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -43,7 +43,7 @@
                           <td>৳<asp:Label ID="lblPrice" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                               <asp:HiddenField ID="hdnProductId" runat="server" value='<%# Eval("ProductId") %>' />
                               <asp:HiddenField ID="hdnQuantity" runat="server" value='<%# Eval("Qty") %>'/>
-                              <asp:HiddenField ID="hdnprdQuantity" runat="server" value='<%# Eval("PrdQty") %>'/>
+                              <asp:HiddenField ID="hdnPrdQuantity" runat="server" value='<%# Eval("PrdQty") %>'/>
 
                           </td>
                           <td>
@@ -51,16 +51,12 @@
                                   <div class="quantity">
                                       <div class="pro-qty">
                                           <asp:TextBox ID="txtQuantity" runat="server" TextMode="Number" Text='<%# Eval("Quantity") %>'>
-
                                           </asp:TextBox>
                                           <asp:RegularExpressionValidator ID="revQuantity" runat="server" ErrorMessage="*" ForeColor="Red" 
                                               Font-Size="Small" ValidationExpression="[1-9]*" ControlToValidate="txtQuantity"
                                               Display="Dynamic" SetFocusOnError="true" EnableClientScript="true"></asp:RegularExpressionValidator>
-
                                       </div>
-
                                   </div>
-
                               </div>
                           </td>
                           <td>৳<asp:Label ID="lblTotalPrice" runat="server" ></asp:Label></td>

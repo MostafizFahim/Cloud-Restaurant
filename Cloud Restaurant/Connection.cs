@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Web;
+using Cloud_Restaurant.Admin;
 
 namespace Cloud_Restaurant
 {
@@ -22,6 +23,7 @@ namespace Cloud_Restaurant
     {
         SqlConnection con;
         SqlCommand cmd;
+        SqlDataAdapter sda;
         public static bool IsValidExtension(string fileName) 
         {
             bool isValid = false;
@@ -82,8 +84,18 @@ namespace Cloud_Restaurant
             return isUpdated;
         }
 
-
-
+        public int cartCount(int userId)
+        {
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Cart_Crud", con);
+            cmd.Parameters.AddWithValue("@Action", "SELECT");
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            cmd.CommandType = CommandType.StoredProcedure;
+            sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt.Rows.Count;
+         }
     }
 
 }

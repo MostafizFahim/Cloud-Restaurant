@@ -111,7 +111,11 @@ $(".client_owl-carousel").owlCarousel({
         var newVal;
 
         if ($button.hasClass('inc')) {
-            newVal = parseFloat(oldValue) + 1;
+            if (oldValue >= 10) {
+                newVal = parseFloat(oldValue);
+            } else {
+                newVal = parseFloat(oldValue) + 1;
+            }
         } else {
             if (oldValue > 1) {
                 newVal = parseFloat(oldValue) - 1;
