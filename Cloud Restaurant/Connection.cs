@@ -96,6 +96,13 @@ namespace Cloud_Restaurant
             sda.Fill(dt);
             return dt.Rows.Count;
          }
+
+        public static string GetUniqueId()
+        {
+            Guid guid = Guid.NewGuid();
+            string uniqueId = guid.ToString();
+            return uniqueId;
+        }
     }
 
 }
