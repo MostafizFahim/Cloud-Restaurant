@@ -53,7 +53,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="book_section" style="background-image: url('../Images/payment-bg.png'); width: 100%; height: 100%; background-repeat: no-repeat; background-size: auto; background-attachment: fixed; background-position: left;">
+    <section class="book_section" style="background-image: url('../Images/payment-bg-3.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;">
 
         <div class="container py-5">
             <div class="align-self-end">

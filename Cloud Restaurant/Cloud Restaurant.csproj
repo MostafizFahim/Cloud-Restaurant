@@ -188,6 +188,10 @@
     <Content Include="Global.asax" />
     <Content Include="Images\login.jpg" />
     <Content Include="Images\No_image.png" />
+    <Content Include="Images\offer-bg.jpg" />
+    <Content Include="Images\payment-bg-2.jpg" />
+    <Content Include="Images\payment-bg-3.jpg" />
+    <Content Include="Images\payment-bg.png" />
     <Content Include="TemplateFiles\css\bootstrap.css" />
     <Content Include="TemplateFiles\css\font-awesome.min.css" />
     <Content Include="TemplateFiles\css\responsive.css" />
