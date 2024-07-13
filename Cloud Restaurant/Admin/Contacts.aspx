@@ -58,7 +58,6 @@
                                                             <tr>
                                                                 <td class="table-plus"><%#Eval("SrNo")%> </td>
                                                                 <td><%#Eval("Name")%> </td>
-                                                                
                                                                 <td><%#Eval("Email")%> </td>
                                                                 <td><%#Eval("Subject")%> </td>
                                                                 <td><%#Eval("Message")%> </td>
