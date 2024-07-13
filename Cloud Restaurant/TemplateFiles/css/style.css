@@ -452,7 +452,7 @@ a:focus {
         margin-top: 45px;
         border-radius: 5px;
         padding: 20px 15px;
-        background-color: #3498DB;
+        background-color: #005d6b75;
         color: #ffffff;
     }
 
@@ -465,7 +465,7 @@ a:focus {
             -webkit-transition: all 0.1 0.5s;
             transition: all 0.1 0.5s;
             border-radius: 100%;
-            border: 5px solid #3498DB;
+            border: 5px solid #17a2b8;
             overflow: hidden;
         }
 
@@ -494,7 +494,7 @@ a:focus {
         .offer_section .box .detail-box a {
             display: inline-block;
             padding: 10px 30px;
-            background-color: #3498DB;
+            background-color: #17a2b8;
             color: #ffffff;
             border-radius: 45px;
             -webkit-transition: all 0.3s;

@@ -5,13 +5,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <section class="book_section" ">
 
+    </section>
 
 
 
     <!-- offer section -->
 
-    <section class="offer_section layout_padding-bottom">
+    <section class="offer_section layout_padding-bottom" style="background-image: url('../Images/offer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;">
         <div class="offer_container">
             <div class="container ">
                 <div class="row">
