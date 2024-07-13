@@ -24,15 +24,6 @@ namespace Cloud_Restaurant.User
         protected global::System.Web.UI.WebControls.Label lblMsg;
 
         /// <summary>
-        /// txtName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
-
-        /// <summary>
         /// rfvName control.
         /// </summary>
         /// <remarks>
@@ -42,13 +33,13 @@ namespace Cloud_Restaurant.User
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
 
         /// <summary>
-        /// txtEmail control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
         /// rfvEmail control.
@@ -60,13 +51,13 @@ namespace Cloud_Restaurant.User
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
 
         /// <summary>
-        /// txtSubject control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSubject;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// rfvSubject control.
@@ -78,13 +69,13 @@ namespace Cloud_Restaurant.User
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSubject;
 
         /// <summary>
-        /// txtMassage control.
+        /// txtSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMassage;
+        protected global::System.Web.UI.WebControls.TextBox txtSubject;
 
         /// <summary>
         /// rfvMassage control.
@@ -94,6 +85,15 @@ namespace Cloud_Restaurant.User
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMassage;
+
+        /// <summary>
+        /// txtMassage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMassage;
 
         /// <summary>
         /// btnSubmit control.

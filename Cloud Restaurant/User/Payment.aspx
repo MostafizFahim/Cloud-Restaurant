@@ -28,7 +28,7 @@
     <script>
         /* For disappearing alert message */
         window.onload = function () {
-            var seconds = 5;
+            var seconds = 25;
             setTimeout(function () {
                 document.getElementById("<%=lblMsg.ClientID %>").style.display = "none";
         }, seconds * 1000);
