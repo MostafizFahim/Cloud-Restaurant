@@ -16,7 +16,7 @@
                                     every order. Try us today and savor the future of dining! 
                                 </p>
                                 <div class="btn-box">
-                                    <a href="" class="btn1">Order Now
+                                    <a href="Menu.aspx" class="btn1">Order Now
                                     </a>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                                     Order now and let us bring the restaurant experience straight to your door!
                                 </p>
                                 <div class="btn-box">
-                                    <a href="" class="btn1">Order Now
+                                    <a href="Menu.aspx" class="btn1">Order Now
                                     </a>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                 <p>
                                     Are you a frequent visitor to our restaurant? We have something special for you! Introducing our exclusive membership program designed just for our regular patrons. Enjoy a host of benefits, including special discounts, priority reservations, sneak peeks at new menu items, and much more. Stay tuned for details on how you can elevate your dining experience with us!
                                 <div class="btn-box">
-                                    <a href="" class="btn1">Order Now
+                                    <a href="Menu.aspx" class="btn1">Order Now
                                     </a>
                                 </div>
                             </div>
