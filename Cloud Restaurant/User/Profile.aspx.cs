@@ -30,6 +30,10 @@ namespace Cloud_Restaurant.User
                 else
                 {
                     getUserDetails();
+                    getPurchaseHistory();
+
+
+
                 }
             }
             
@@ -56,5 +60,86 @@ namespace Cloud_Restaurant.User
             }
             
         }
+        void getPurchaseHistory()
+        {
+            int sr = 1;
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Invoice", con);
+            cmd.Parameters.AddWithValue("@Action", "ODRHISTORY");
+            cmd.Parameters.AddWithValue("@UserId", Session["userId"]);
+            cmd.CommandType = CommandType.StoredProcedure;
+            sda = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            sda.Fill(dt);
+            dt.Columns.Add("SrNo", typeof(Int32));
+            if (dt.Rows.Count> 0)
+            {
+                foreach (DataRow dataRow in dt.Rows) 
+                {
+                    dataRow["SrNo"] = sr;
+                    sr++;
+                }
+            }
+           
+            if (dt.Rows.Count == 0)
+            {
+                rPurchaseHistory.FooterTemplate = null;
+                rPurchaseHistory.HeaderTemplate = new CustomTemplate(ListItemType.Footer);
+            }
+            rPurchaseHistory.DataSource = dt;
+            rPurchaseHistory.DataBind();
+        }
+        protected void rPurchaseHistory_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if(e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                double grandTotal = 0;
+                HiddenField paymentId = e.Item.FindControl("hdnPaymentId") as HiddenField;
+                Repeater repOrders = e.Item.FindControl("rOrders") as Repeater;
+
+                con = new SqlConnection(Connection.GetConnectionString());
+                cmd = new SqlCommand("Invoice", con);
+                cmd.Parameters.AddWithValue("@Action", "INVOICE");
+                cmd.Parameters.AddWithValue("@PaymentId", Convert.ToInt32(paymentId.Value));
+                cmd.Parameters.AddWithValue("@UserId", Session["userId"]);
+                cmd.CommandType = CommandType.StoredProcedure;
+                sda = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dataRow in dt.Rows)
+                    {
+                        grandTotal += Convert.ToDouble(dataRow["TotalPrice"]);
+
+                    }
+                }
+
+                DataRow dr = dt.NewRow();
+                dr["TotalPrice"] = grandTotal;
+                dt.Rows.Add(dr);
+                repOrders.DataSource = dt;
+                repOrders.DataBind();
+            }
+            
+        }
+        private sealed class CustomTemplate : ITemplate
+        {
+            private ListItemType ListItemType { get; set; }
+            public CustomTemplate(ListItemType type)
+            {
+                ListItemType = type;
+            }
+            public void InstantiateIn(Control container)
+            {
+                if (ListItemType == ListItemType.Footer)
+                {
+                    var footer = new LiteralControl("<tr><td><b>HUNGRY? GRAB YOUR DESIRE FOOD NOW!.</b><a href='Menu.aspx' class='badge badge-info ml-2'>Click to Order</a></td></tr></tbody></table>");
+                    container.Controls.Add(footer);
+                }
+            }
+        }
+
+       
     }
 }
