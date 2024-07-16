@@ -15,22 +15,25 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="container">
-                                        <div class="form-group col-md-4">
-                                            <label>From Date</label>
-                                            <asp:RegularExpressionValidator ID="rfvFromDate" runat="server" ForeColor="Red" ErrorMessage="*"
-                                                SetFocusOnError="true" Display="Dynamic" ControlToValidate="txtFromDate"></asp:RegularExpressionValidator>
-                                            <asp:TextBox ID="txtFromDate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label>From Date</label>
+                                                <asp:RegularExpressionValidator ID="rfvFromDate" runat="server" ForeColor="Red" ErrorMessage="*"
+                                                    SetFocusOnError="true" Display="Dynamic" ControlToValidate="txtFromDate"></asp:RegularExpressionValidator>
+                                                <asp:TextBox ID="txtFromDate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>To Date</label>
+                                                <asp:RegularExpressionValidator ID="rfvToDate" runat="server" ForeColor="Red" ErrorMessage="*"
+                                                    SetFocusOnError="true" Display="Dynamic" ControlToValidate="txtToDate"></asp:RegularExpressionValidator>
+                                                <asp:TextBox ID="txtToDate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary mt-md-4"
+                                                    OnClick="btnSearch_Click" />
+                                            </div>
                                         </div>
-                                        <div class="form-group col-md-4">
-                                            <label>To Date</label>
-                                            <asp:RegularExpressionValidator ID="rfvToDate" runat="server" ForeColor="Red" ErrorMessage="*"
-                                                SetFocusOnError="true" Display="Dynamic" ControlToValidate="txtToDate"></asp:RegularExpressionValidator>
-                                            <asp:TextBox ID="txtToDate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary mt-md-4"
-                                                OnCLick="btnSearch_Click"/>
-                                        </div>
+
 
                                     </div>
                                 </div>
@@ -43,7 +46,7 @@
                                             <div class="card-block table-border-style">
                                                 <div class="table-responsive">
 
-                                                    <asp:Repeater ID="rReport" runat="server" >
+                                                    <asp:Repeater ID="rReport" runat="server">
                                                         <HeaderTemplate>
                                                             <table class="table data-table-export table-hover nowrap">
                                                                 <thead>
@@ -65,7 +68,7 @@
                                                                 <td><%#Eval("TotalOrders")%> </td>
                                                                 <td><%#Eval("TotalPrice")%> </td>
                                                                 <td><%#Eval("CreatedDate")%></td>
-                                                                
+
                                                                 </td>
                                                             </tr>
                                                         </ItemTemplate>
