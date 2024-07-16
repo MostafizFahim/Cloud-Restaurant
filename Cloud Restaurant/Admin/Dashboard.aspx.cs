@@ -18,6 +18,18 @@ namespace Cloud_Restaurant.Admin
                 {
                     Response.Redirect("../User/Login.aspx");
                 }
+                else
+                {
+                    DashboardCount dashboard = new DashboardCount();
+                    Session["category"] = dashboard.Count("CATEGORY");
+                    Session["product"] = dashboard.Count("PRODUCT");
+                    Session["order"] = dashboard.Count("ORDER");
+                    Session["delivered"] = dashboard.Count("DELIVERED");
+                    Session["pending"] = dashboard.Count("PENDING");
+                    Session["user"] = dashboard.Count("USER");
+                    Session["soldAmont"] = dashboard.Count("SOLDAMOUNT");
+                    Session["contact"] = dashboard.Count("CONTACT");
+                }
             }
 
         }

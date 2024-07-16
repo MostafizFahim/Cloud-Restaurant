@@ -122,7 +122,8 @@
                                 <i class="ti-search"></i>
                             </a>
                             <a href="Dashboard.aspx">
-                                <img class="img-fluid" src="../assets/images/logo-admin1.png" alt="Theme-Logo" />
+                                <%-- %><img class="img-fluid" src="../assets/images/logo-admin1.png" alt="Theme-Logo" />--%>
+                                <h3 class="pl-2">Admin Panel</h3>
                             </a>
                             <a class="mobile-options">
                                 <i class="ti-more"></i>
