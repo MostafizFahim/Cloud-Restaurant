@@ -106,7 +106,7 @@
                                 <div class="card-block-small">
                                     <i class="icofont icofont-money-bag bg-c-blue card1-icon"></i>
                                     <span class="text-c-green f-w-600">Sold Amount</span>
-                                    <h4><% Response.Write(Session["soldAmont"]); %></h4>
+                                    <h4><% Response.Write(Session["soldAmount"]); %></h4>
                                     <div>
                                         <span class="f-left m-t-10 text-muted"></span>
                                         <a href="Report.aspx"><i class="text-c-green f-16 icofont icofont-eye-alt m-r-10">View Details</i></a>

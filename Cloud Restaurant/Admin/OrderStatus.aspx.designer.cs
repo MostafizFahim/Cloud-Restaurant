@@ -11,70 +11,79 @@ namespace Cloud_Restaurant.Admin
 {
 
 
-    public partial class Report
+    public partial class OrderStatus
     {
 
         /// <summary>
-        /// rfvFromDate control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFromDate;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
 
         /// <summary>
-        /// txtFromDate control.
+        /// rOrderStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFromDate;
+        protected global::System.Web.UI.WebControls.Repeater rOrderStatus;
 
         /// <summary>
-        /// rfvToDate control.
+        /// pUpdateOrderStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvToDate;
+        protected global::System.Web.UI.WebControls.Panel pUpdateOrderStatus;
 
         /// <summary>
-        /// txtToDate control.
+        /// ddlOrderStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtToDate;
+        protected global::System.Web.UI.WebControls.DropDownList ddlOrderStatus;
 
         /// <summary>
-        /// btnSearch control.
+        /// rfvDdlOrderStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDdlOrderStatus;
 
         /// <summary>
-        /// rReport control.
+        /// hdnId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rReport;
+        protected global::System.Web.UI.WebControls.HiddenField hdnId;
 
         /// <summary>
-        /// lblTotal control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
+
+        /// <summary>
+        /// btnCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancel;
     }
 }

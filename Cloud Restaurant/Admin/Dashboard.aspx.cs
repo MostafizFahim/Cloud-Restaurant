@@ -27,7 +27,7 @@ namespace Cloud_Restaurant.Admin
                     Session["delivered"] = dashboard.Count("DELIVERED");
                     Session["pending"] = dashboard.Count("PENDING");
                     Session["user"] = dashboard.Count("USER");
-                    Session["soldAmont"] = dashboard.Count("SOLDAMOUNT");
+                    Session["soldAmount"] = dashboard.Count("SOLDAMOUNT");
                     Session["contact"] = dashboard.Count("CONTACT");
                 }
             }
