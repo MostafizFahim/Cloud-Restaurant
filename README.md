@@ -34,7 +34,7 @@ It allows customers to browse the menu, place orders, and pay online, while admi
 
 ---
 
-##🗄️ Database Overview
+🗄️ Database Overview
 | Table Name       | Description                                                                  |
 | ---------------- | ---------------------------------------------------------------------------- |
 | **Users**        | Stores user information such as name, email, password, address, and contact. |
