@@ -28,28 +28,74 @@ namespace Cloud_Restaurant.User
            
         }
 
+        //protected void btnLogin_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (LoginType.SelectedValue == "Admin")
+        //        {
+        //            username = ConfigurationManager.AppSettings["username"];
+        //            password = ConfigurationManager.AppSettings["password"];
+        //            if (username == txtUsername.Text.Trim() && password == txtPassword.Text.Trim())
+        //            {
+        //                Session["admin"] = username;
+        //                Response.Redirect("../Admin/Dashboard.aspx", false);
+        //            }
+        //            else
+        //            {
+        //                showErrorMsg("Admin");
+        //            }
+        //            //Select login type 
+        //        }
+
+        //        else
+        //        {
+        //            con = new SqlConnection(Connection.GetConnectionString());
+        //            cmd = new SqlCommand("User_Crud", con);
+        //            cmd.Parameters.AddWithValue("@Action", "SELECTL");
+        //            cmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
+        //            cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+        //            cmd.CommandType = CommandType.StoredProcedure;
+        //            sda = new SqlDataAdapter(cmd);
+        //            dt = new DataTable();
+        //            sda.Fill(dt);
+
+        //            if (dt.Rows.Count == 1)
+        //            {
+        //                Session["username"] = txtUsername.Text.Trim();
+        //                Session["userId"] = dt.Rows[0]["userId"];
+        //                Response.Redirect("Default.aspx");
+        //            }
+        //            else
+        //            {
+        //                lblMsg.Visible = true;
+        //                lblMsg.Text = "Invalid Credentials..!";
+        //                lblMsg.CssClass = "alert alert-danger";
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Response.Write("<script>alert('" + ex.Message + "');</script>");
+        //        con.Close();
+        //    }
+        //}
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                if (LoginType.SelectedValue == "Admin")
+                // Admin login logic from AppSettings
+                string adminUsername = ConfigurationManager.AppSettings["username"];
+                string adminPassword = ConfigurationManager.AppSettings["password"];
+
+                if (txtUsername.Text.Trim() == adminUsername && txtPassword.Text.Trim() == adminPassword)
                 {
-                    username = ConfigurationManager.AppSettings["username"];
-                    password = ConfigurationManager.AppSettings["password"];
-                    if (username == txtUsername.Text.Trim() && password == txtPassword.Text.Trim())
-                    {
-                        Session["admin"] = username;
-                        Response.Redirect("../Admin/Dashboard.aspx", false);
-                    }
-                    else
-                    {
-                        showErrorMsg("Admin");
-                    }
-                    //Select login type 
+                    Session["admin"] = adminUsername;
+                    Response.Redirect("../Admin/Dashboard.aspx", false);
                 }
-                
                 else
                 {
+                    // Database user login logic
                     con = new SqlConnection(Connection.GetConnectionString());
                     cmd = new SqlCommand("User_Crud", con);
                     cmd.Parameters.AddWithValue("@Action", "SELECTL");
@@ -80,6 +126,7 @@ namespace Cloud_Restaurant.User
                 con.Close();
             }
         }
+
         private void showErrorMsg(string userType)
         {
             lblMsg.Visible = true;

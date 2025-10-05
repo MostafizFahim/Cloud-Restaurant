@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form_container">
-                        <div>
+                        <%--<div>
                             <label>Login Type</label>
                             <asp:DropDownList ID="LoginType" runat="server" CssClass="form-control w-100 mb-3">
                                 <asp:ListItem Value="0">Select Login Type</asp:ListItem>
@@ -38,7 +38,7 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Login Type is required"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Font-Size="Small" InitialValue="0"
                                 ControlToValidate="LoginType"></asp:RequiredFieldValidator>
-                        </div>
+                        </div>--%>
                         <div>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Username is required" ControlToValidate="txtUsername" 
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
