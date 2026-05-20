@@ -1,206 +1,235 @@
-# 🍽️ Cloud Restaurant
+# Cloud Restaurant
 
-Cloud Restaurant is an **online food ordering and management system** designed to simplify restaurant operations.  
-It allows customers to browse the menu, place orders, and pay online, while admins can manage menus, orders, and customers in real time.
+Cloud Restaurant is an online food ordering and management system built with ASP.NET Web Forms. Customers can browse menu items, place orders, and make payments, while admins can manage categories, products, users, orders, contacts, and reports.
 
 ---
 
-## 🚀 Features
+## Features
 
-### 👤 User Features
+### User Features
+
 - Register, login, and manage profiles.
-- Browse and search menu items with images and prices.
-- Add items to the cart and customize orders.
-- Secure online payments.
-- Track order status in real time.
-- Rate and provide feedback on food and delivery.
+- Browse menu items with images and prices.
+- Add products to cart.
+- Place orders and make payments.
+- View invoice and order history.
+- Send contact or feedback messages.
 
-### 🧑‍💼 Admin Features
-- Manage food categories and items (add, edit, delete).
-- Monitor and process customer orders.
-- Manage customer data and feedback.
-- Generate sales reports and track performance.
+### Admin Features
+
+- Manage food categories.
+- Manage food products.
+- Monitor and update order status.
+- Manage users and contacts.
+- View dashboard counts and selling reports.
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Component | Technology |
-|------------|-------------|
-| Frontend | HTML, CSS, C# ASP.NET |
-| Backend | ASP.NET (C#) |
-| Database | MS SQL Server |
-| Platform | Web Application |
+| --- | --- |
+| Frontend | HTML, CSS, Bootstrap, ASP.NET Web Forms |
+| Backend | C# ASP.NET Web Forms |
+| Database | Microsoft SQL Server |
+| Reporting/PDF | iTextSharp |
+| Platform | .NET Framework 4.8 |
 
 ---
 
-🗄️ Database Overview
-| Table Name       | Description                                                                  |
-| ---------------- | ---------------------------------------------------------------------------- |
-| **Users**        | Stores user information such as name, email, password, address, and contact. |
-| **Categories**   | Holds menu categories (e.g., Drinks, Main Course, Desserts).                 |
-| **Products**     | Contains food item details, prices, images, and category links.              |
-| **Carts**        | Tracks items that users add to their cart before checkout.                   |
-| **Orders**       | Stores information about orders placed by users.                             |
-| **OrderDetails** | Stores specific details (items, quantity) for each order.                    |
-| **Payments**     | Handles payment information for orders.                                      |
-| **Contacts**     | Manages customer feedback and inquiries.                                     |
+## Database Overview
 
-🧩 The SQL scripts for creating these tables and inserting sample data are available in the sqlTableCode folder.
+| Table Name | Description |
+| --- | --- |
+| `Users` | Stores user information such as name, email, password, address, and contact. |
+| `Contact` | Stores customer contact and feedback messages. |
+| `Categories` | Stores menu categories. |
+| `Products` | Stores food item details, prices, images, and category links. |
+| `Carts` | Tracks items users add before checkout. |
+| `Orders` | Stores order details for purchased products. |
+| `Payment` | Stores payment information for orders. |
 
-⚙️ How to Run the Project
-🧩 Prerequisites
+The original SQL scripts are in the `sqlTableCode` folder. For easier future setup, use the combined restore script:
 
-Before running this project, make sure you have:
+```text
+sqlTableCode/CloudDB_All_In_One_Restore.sql
+```
 
-Visual Studio
- or Visual Studio Code
+---
 
-.NET Framework / .NET SDK
+## Important Database Note
 
-Microsoft SQL Server
+This project uses **Microsoft SQL Server**, not MySQL.
 
-SQL Server Management Studio (SSMS)
+If you only have **MySQL Command Line Client**, that is not enough to run this project locally. MySQL and SQL Server are different DBMS products. This application uses:
 
-A modern web browser (Chrome / Edge)
+- `System.Data.SqlClient`
+- SQL Server connection strings
+- T-SQL stored procedures
+- SQL Server table-valued parameters
 
-🪜 Setup Instructions
-1️⃣ Clone the Repository
-git clone https://github.com/MostafizFahim/Cloud-Restaurant.git
-cd Cloud-Restaurant
+To use MySQL, the project would need code changes, package changes, connection string changes, and SQL script conversion. The easiest path is to use SQL Server LocalDB, SQL Server Express, or a remote SQL Server.
 
-2️⃣ Open the Project
+---
 
-Open the .sln file in Visual Studio
-OR
+## How to Run the Project
 
-Open the folder in Visual Studio Code (ensure you have the C# and .NET extensions installed).
+### Prerequisites
 
-3️⃣ Setup the Database
+- Visual Studio with ASP.NET/.NET Framework support
+- .NET Framework 4.8
+- A SQL Server database engine, either LocalDB, SQL Server Express, full SQL Server, or remote SQL Server
+- A modern browser
 
-Open SQL Server Management Studio (SSMS).
+SSMS is helpful but not strictly required if you can run SQL scripts with `sqlcmd`.
 
-Create a new database named CloudRestaurantDB.
+---
 
-Open the sqlTableCode folder.
+## Option 1: Run Locally With SQL Server LocalDB
 
-Execute all .sql files in order to create the necessary tables and insert sample data.
+This is usually the lightest local option if it is already installed with Visual Studio.
 
-4️⃣ Configure Database Connection
+1. Check whether LocalDB exists:
 
-Locate the configuration file:
+```powershell
+sqllocaldb info
+```
 
-Web.config (for ASP.NET Framework)
+2. If `MSSQLLocalDB` appears, start it:
 
-or appsettings.json (for ASP.NET Core)
+```powershell
+sqllocaldb start MSSQLLocalDB
+```
 
-Update your connection string as shown below:
+3. Create the database:
 
+```powershell
+sqlcmd -S "(localdb)\MSSQLLocalDB" -i "sqlTableCode\CloudDB_All_In_One_Restore.sql"
+```
+
+4. Update `Cloud Restaurant/Web.config`:
+
+```xml
 <connectionStrings>
-  <add name="CloudRestaurantDB"
-       connectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=CloudRestaurantDB;Integrated Security=True;"
+  <add name="CloudDBConnectionString"
+       connectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CloudDB;Integrated Security=True;MultipleActiveResultSets=True;"
        providerName="System.Data.SqlClient" />
 </connectionStrings>
-
-
-💡 Replace YOUR_SERVER_NAME with your SQL Server name (e.g., DESKTOP-1234SQLEXPRESS).
-
-5️⃣ Run the Project
-
-Press F5 or click Run in Visual Studio.
-
-The project will launch in your browser (e.g., http://localhost:5000 or http://localhost:8080).
-
-You’ll see the Cloud Restaurant homepage or login screen.
-
-## 📊 System Overview
-
-The **Cloud Restaurant** system connects customers, administrators, and delivery personnel on a single platform.  
-Customers place and track orders, admins manage menus and orders, and delivery staff update delivery status — all in real time.
+```
 
 ---
 
-## 🧩 System Diagrams
+## Option 2: Run Locally With SQL Server Express
 
-### 🧠 Use Case Diagram
-Depicts interactions between users (Customer, Admin) and system functionalities.
+Use this if LocalDB is not available and you want a local database.
 
-### 🔄 Data Flow Diagram
-Shows the movement of data between key modules:
-- User Management  
-- Menu Management  
-- Order & Payment Processing  
+1. Install SQL Server Express.
+2. Install SSMS or use `sqlcmd`.
+3. Run:
 
-### 🧮 Entity Relationship Diagram
-Represents database structure including tables:
-- `Users`, `Products`, `Categories`, `Orders`, `Payments`, and `OrderDetails`.
+```powershell
+sqlcmd -S ".\SQLEXPRESS" -i "sqlTableCode\CloudDB_All_In_One_Restore.sql"
+```
+
+4. Update `Cloud Restaurant/Web.config`:
+
+```xml
+<connectionStrings>
+  <add name="CloudDBConnectionString"
+       connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=CloudDB;Integrated Security=True;MultipleActiveResultSets=True;"
+       providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
+
+If your SQL Server instance has another name, replace `.\SQLEXPRESS` with that instance name.
 
 ---
 
-## 🖼️ Screenshots
+## Option 3: Run Without Installing SQL Server Locally
+
+Use SQL Server on another PC, a lab machine, or a hosted SQL Server.
+
+1. Run `sqlTableCode/CloudDB_All_In_One_Restore.sql` on the remote SQL Server.
+2. Make sure TCP/IP and firewall access are enabled on that SQL Server.
+3. Update `Cloud Restaurant/Web.config`:
+
+```xml
+<connectionStrings>
+  <add name="CloudDBConnectionString"
+       connectionString="Data Source=SERVER_IP,1433;Initial Catalog=CloudDB;User ID=YOUR_USER;Password=YOUR_PASSWORD;TrustServerCertificate=True;MultipleActiveResultSets=True;"
+       providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
+
+If the remote SQL Server uses a named instance, the `Data Source` may look like:
+
+```text
+SERVER_IP\SQLEXPRESS
+```
+
+---
+
+## Run the Web App
+
+1. Open `Cloud Restaurant.sln` in Visual Studio.
+2. Restore NuGet packages if Visual Studio asks.
+3. Make sure `Cloud Restaurant/Web.config` points to the correct SQL Server.
+4. Run with IIS Express.
+
+Admin login is configured in `Cloud Restaurant/Web.config`:
+
+```text
+username: Mostafiz
+password: 12345
+```
+
+---
+
+## Screenshots
 
 | Section | Screenshot |
-|----------|-------------|
-| **Login Page** | ![Login](readme_image/login.png) |
-| **User Interface** | ![User Interface](readme_image/user%20interface.png) |
-| **Menu Page** | ![Menu](readme_image/menu.png) |
-| **Cart Page** | ![Cart](readme_image/Cart.png) |
-| **Payment Page** | ![Payment](readme_image/Payment.png) |
-| **Order Details** | ![Order Details](readme_image/Order%20details.png) |
-| **Profile Management** | ![Profile](readme_image/Profile.png) |
-| **Feedback Page** | ![Feedback](readme_image/feedback.png) |
-| **Admin Dashboard** | ![Admin](readme_image/Admin.png) |
-| **Menu Management (Admin)** | ![Menu Management](readme_image/Menu%20management.png) |
-| **Category Management** | ![Category](readme_image/category.png) |
-| **Order Management** | ![Order Management](readme_image/oder%20management.png) |
-| **Customer Management** | ![Customer Management](readme_image/customer%20management.png) |
-| **Selling Report** | ![Selling Report](readme_image/selling%20report.png) |
+| --- | --- |
+| Login Page | ![Login](readme_image/login.png) |
+| User Interface | ![User Interface](readme_image/user%20interface.png) |
+| Menu Page | ![Menu](readme_image/menu.png) |
+| Cart Page | ![Cart](readme_image/Cart.png) |
+| Payment Page | ![Payment](readme_image/Payment.png) |
+| Order Details | ![Order Details](readme_image/Order%20details.png) |
+| Profile Management | ![Profile](readme_image/Profile.png) |
+| Feedback Page | ![Feedback](readme_image/feedback.png) |
+| Admin Dashboard | ![Admin](readme_image/Admin.png) |
+| Menu Management | ![Menu Management](readme_image/Menu%20management.png) |
+| Category Management | ![Category](readme_image/category.png) |
+| Order Management | ![Order Management](readme_image/oder%20management.png) |
+| Customer Management | ![Customer Management](readme_image/customer%20management.png) |
+| Selling Report | ![Selling Report](readme_image/selling%20report.png) |
 
 ---
 
-## 📈 Opportunities for Future Development
-
-- Improve personalization using AI-based recommendations.  
-- Integrate third-party delivery and payment systems.  
-- Introduce mobile app support.  
-- Add data analytics dashboards for insights and performance tracking.
-
----
-
-## 👥 Contributors
+## Contributors
 
 | Name | ID | Role |
-|------|----|------|
-| **Naeema Jannat** | 20210104005 | Developer |
-| **Mostafiz Fahim** | 20210104008 | Developer |
-| **Asadut Jaman** | 20210104009 | Developer |
+| --- | --- | --- |
+| Naeema Jannat | 20210104005 | Developer |
+| Mostafiz Fahim | 20210104008 | Developer |
+| Asadut Jaman | 20210104009 | Developer |
 
 ---
 
-## 🧾 Course Information
+## Course Information
 
 **Course No:** CSE 3224  
 **Course Name:** Information System Design & Software Engineering Lab  
 **Department:** Computer Science and Engineering  
-**Institution:** [Ahsanullah University of Science and Technology]  
-**Instructors:**  
-- Dr. Taslim Taher (Assistant Professor)  
-- Ms. Tasnuva Binte Rahman (Lecturer)
+**Institution:** Ahsanullah University of Science and Technology  
+**Submission Date:** 17 July 2024
 
 ---
 
-## 📅 Submission Date
+## References
 
-**17 July 2024**
+All technical and conceptual references are listed in the project report:
 
----
-
-## 📚 References
-
-All technical and conceptual references are listed in the project report:  
-📄 *Final Report Details.pdf*
-
----
-
-> 💡 *Cloud Restaurant — bringing convenience, efficiency, and technology to modern dining.*
-
+```text
+Reports/Final Report Details.pdf
+```
